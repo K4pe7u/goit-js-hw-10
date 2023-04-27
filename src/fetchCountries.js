@@ -32,4 +32,4 @@ export const fetchCountries = async name => {
 //     });
 // };
 
-// Promise {<pending>} + Array(250) finish console.log
+// Promise {<pending>} + Array(250) finish console.logkkkk
