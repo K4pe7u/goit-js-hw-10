@@ -30,13 +30,13 @@ const appearCountries = data => {
 const appearOneCountry = data => {
   clear();
   const languages = Object.values(data.languages).join(', ');
-  countryInfoEl.innerHTML = `<img class="flag-single" src="${data.flags.svg}"/> 
-  <p class="country-single">${data.name.official}</p> 
-  <p><span class="bold"> Capital: </span> ${data.capital[0]}</p> 
-  <p><span class="bold"> Population: </span> ${emptySpaces(
+  countryInfoEl.innerHTML = `<img class="flag" src="${data.flags.svg}"/> 
+  <div class="container-info"><p class="country">${data.name.official}</p> 
+  <p><span class="description"> Capital: </span> ${data.capital[0]}</p> 
+  <p><span class="description"> Population: </span> ${emptySpaces(
     data.population
   )}</p> 
-  <p><span class="bold"> Languages: </span> ${languages}</p>`;
+  <p><span class="description"> Languages: </span> ${languages}</p></div>`;
 };
 
 const delayReadData = debounce(async event => {
